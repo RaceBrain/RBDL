@@ -14,7 +14,7 @@ The structure of an RBDL file is as follows:
 
 ## File Header
 
-The file header is a 16 byte header that provides the information required to parse the rest of the file. It has the following structure:
+The file header is a 6 byte header that provides the information required to parse the rest of the file. It has the following structure:
 
 | Field | Byte Width |
 | --- | --- |
@@ -47,25 +47,25 @@ The second byte describes how many bytes this channel will log to each row. Once
 
 The following channel identifiers are currently defined by the specification.
 
-| Channel | Identifier |
-| --- | --- |
-| Position | 0x00 |
-| Time | 0x01 |
-| Accelerometer | 0x02 |
-| OBD-II RPM | 0x10 |
-| OBD-II Vehicle Speed | 0x11 |
-| OBD-II Throttle Position | 0x12 |
-| OBD-II Engine Coolant Temperature | 0x13 |
-| OBD-II Intake Air Temperature | 0x14 |
-| Tyre Temperature Front Left Outer | 0x20 |
-| Tyre Temperature Front Left Center | 0x21 |
-| Tyre Temperature Front Left Inner | 0x22 |
-| Tyre Temperature Front Right Outer | 0x23 |
-| Tyre Temperature Front Right Center | 0x24 |
-| Tyre Temperature Front Right Inner | 0x25 |
-| Tyre Temperature Rear Left Outer | 0x26 |
-| Tyre Temperature Rear Left Center | 0x27 |
-| Tyre Temperature Rear Left Inner | 0x28 |
-| Tyre Temperature Rear Right Outer | 0x29 |
-| Tyre Temperature Rear Right Center | 0x2A |
-| Tyre Temperature Rear Right Inner | 0x2B |
+| Channel | Identifier | Byte Width | Data Type |
+| --- | --- | --- | --- |
+| Position | 0x00 | 16 | RBDL Position |
+| Time | 0x01 | 6 | RBDL Time |
+| Accelerometer | 0x02 | RBDL Accelerometer |
+| OBD-II RPM | 0x10 | 4 | IEEE-754 Float |
+| OBD-II Vehicle Speed | 0x11 | 4 | IEEE-754 Float |
+| OBD-II Throttle Position | 0x12 | 4 | IEEE-754 Float |
+| OBD-II Engine Coolant Temperature | 0x13 | 4 | IEEE-754 Float |
+| OBD-II Intake Air Temperature | 0x14 | 4 | IEEE-754 Float |
+| Tyre Temperature Front Left Outer | 0x20 | 4 | IEEE-754 Float |
+| Tyre Temperature Front Left Center | 0x21 | 4 | IEEE-754 Float |
+| Tyre Temperature Front Left Inner | 0x22 | 4 | IEEE-754 Float |
+| Tyre Temperature Front Right Outer | 0x23 | 4 | IEEE-754 Float |
+| Tyre Temperature Front Right Center | 0x24 | 4 | IEEE-754 Float |
+| Tyre Temperature Front Right Inner | 0x25 | 4 | IEEE-754 Float |
+| Tyre Temperature Rear Left Outer | 0x26 | 4 | IEEE-754 Float |
+| Tyre Temperature Rear Left Center | 0x27 | 4 | IEEE-754 Float |
+| Tyre Temperature Rear Left Inner | 0x28 | 4 | IEEE-754 Float |
+| Tyre Temperature Rear Right Outer | 0x29 | 4 | IEEE-754 Float |
+| Tyre Temperature Rear Right Center | 0x2A | 4 | IEEE-754 Float |
+| Tyre Temperature Rear Right Inner | 0x2B | 4 | IEEE-754 Float |
