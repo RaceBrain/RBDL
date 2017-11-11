@@ -51,7 +51,7 @@ The following channel identifiers are currently defined by the specification.
 | --- | --- | --- | --- |
 | Position | 0x00 | 16 | RBDL Position |
 | Time | 0x01 | 6 | RBDL Time |
-| Accelerometer | 0x02 | RBDL Accelerometer |
+| Accelerometer | 0x02 | 6 | RBDL Accelerometer |
 | OBD-II RPM | 0x10 | 4 | IEEE-754 Float |
 | OBD-II Vehicle Speed | 0x11 | 4 | IEEE-754 Float |
 | OBD-II Throttle Position | 0x12 | 4 | IEEE-754 Float |
